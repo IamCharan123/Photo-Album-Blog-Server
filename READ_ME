@@ -1,0 +1,28 @@
+==========================READ ME=========================
+-Server:	 Apache Server
+-Languages Used: HTML,CSS,JavaScript,php
+
+-Procedure to Deploy:
+	-install php,mysql,apache server in your PC 
+	   (For Ubuntu: https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu)
+	   (For Windows: https://docs.moodle.org/29/en/Manual_install_on_Windows_7_with_Apache_and_MySQL)	
+	-Extract the html.zip in root folder(For Ubuntu: /var/www/)
+	-Give all permissions for html folder (chmod -R 777 /var/www/html/)
+	-Run Server by giving link as localhost or 127.0.0.1 or IP Address of your PC
+
+-Folder Description:
+	index.html	- Main Blog WebPage with Text Decorator tools and Multiple Image Upload
+	upload.php	- Uploaded Blog with Album Viewer
+	album.php	- Lists all Albums
+	album_view.php	- Shows photos in selected Album
+	images/		- images used
+	uploads/	- Uploaded Blogs
+
+-Please See: Sample_Blog.mp4 to run and create a Blog
+
+-Contact:
+	Name: SaiCharan Regunta
+	Phone: 9490102123
+	Mail: saicharan.r13@iiits.in / charan.regunta@gmail.com
+	WebSite: https://saicharanregunta.github.io/
+	GitHub Profile Name: SaiCharanRegunta

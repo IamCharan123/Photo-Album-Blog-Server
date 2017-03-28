@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<title>Blog Server</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script>
+
+			function bold() {
+				var strobj=document.getElementById("textentered");
+				strobj.style.fontWeight="bold";
+			}
+
+			function italic() {
+				var strobj=document.getElementById("textentered");
+				strobj.style.fontStyle="italic";
+			}
+
+			function underline() {
+				var strobj=document.getElementById("textentered");
+				strobj.style.textDecoration = "underline";
+			}
+
+			function getOptionFontFamily() {
+				var obj = document.getElementById("textSelect");
+				var x=document.getElementById("textentered");
+				x.style.fontFamily=obj.options[obj.selectedIndex].text;
+			}
+
+			function getOptionFontSize() {
+				var obj = document.getElementById("fontSelect");
+				var x=document.getElementById("textentered");
+				x.style.fontSize=obj.options[obj.selectedIndex].text;
+			}
+
+			function getOptionFontColor() {
+				var obj = document.getElementById("colorSelect");
+				var x=document.getElementById("textentered");
+				x.style.color=obj.options[obj.selectedIndex].text;
+			}
+
+			function totalclear() {
+				var strobj=document.getElementById("textentered");
+				strobj.value="Enter text...";
+			}
+
+		</script>
+	</head>
+	<body background="images/bg.jpg">
+		<div class="boxed" align="center">
+			<h1>Blog Server</h1>
+			<div align="left">
+				<form action="upload.php" method="post" enctype="multipart/form-data">
+					<textarea name="title" id="title" onfocus="if(this.value=='Title') this.value='';" style="font-weight: bold; width: 90%;height: 30px;font-family: myFirstFont;">Title</textarea>
+
+					<br>
+
+					<textarea name="text" id="textentered" onfocus="if(this.value=='Enter text...') this.value='';" style="width: 90%;height: 240px;font-family: myFirstFont; ">Enter text...</textarea>
+					<br><br>
+					<select id="textSelect" type="button" class="myButton" onclick="getOptionFontFamily()">
+						<option>Andale Mono</option>
+						<option>Arial</option>
+						<option>Arial Bold</option>
+						<option>Arial Italic</option>
+						<option>Arial Bold Italic</option>
+						<option>Arial Black</option>
+						<option>Comic Sans MS</option>
+						<option>Comic Sans MS Bold</option>
+						<option>Courier New</option>
+						<option>Courier New Bold</option>
+						<option>Courier New Italic</option>
+						<option>Courier New Bold Italic</option>
+						<option>Georgia</option>
+						<option>Georgia Bold</option>
+						<option>Georgia Italic</option>
+						<option>Georgia Bold Italic</option>
+						<option>Impact</option>
+						<option>Lucida Console</option>
+						<option>Lucida Sans Unicode</option>
+						<option>Marlett</option>
+						<option>Minion Web</option>
+						<option>Symbol</option>
+						<option>Times New Roman</option>
+						<option>Times New Roman Bold</option>
+						<option>Times New Roman Italic</option>
+						<option>Times New Roman Bold Italic</option>
+						<option>Tahoma</option>
+						<option>Trebuchet MS</option>
+						<option>Trebuchet MS Bold</option>
+						<option>Trebuchet MS Italic</option>
+						<option>Trebuchet MS Bold Italic</option>
+						<option>Verdana</option>
+						<option>Verdana Bold</option>
+						<option>Verdana Italic</option>
+						<option>Verdana Bold Italic</option>
+						<option>Webdings</option>
+					</select>
+					<select id="fontSelect" type="button" class="myButton" onclick="getOptionFontSize()">
+						<option>10pt</option>
+						<option>11pt</option>
+						<option>12pt</option>
+						<option>13pt</option>
+						<option>14pt</option>
+						<option>15pt</option>
+						<option>16pt</option>
+						<option>18pt</option>
+						<option>20pt</option>
+						<option>22pt</option>
+						<option>24pt</option>
+						<option>26pt</option>
+						<option>28pt</option>
+						<option>30pt</option>
+					</select>
+					<select id="colorSelect" type="button"  class="myButton" onclick="getOptionFontColor()">
+						<option><font color="White">White</font></option>
+						<option><font color="Silver">Silver</font></option>
+						<option><font color="Gray">Gray</font></option>
+						<option><font color="Black">Black</font></option>
+						<option><font color="Red">Red</font></option>
+						<option><font color="Maroon">Maroon</font></option>
+						<option><font color="Yellow">Yellow</font></option>
+						<option><font color="Olive">Olive</font></option>
+						<option><font color="Lime">Lime</font></option>
+						<option><font color="Green">Green</font></option>
+						<option><font color="Aqua">Aqua</font></option>
+						<option><font color="Teal">Teal</font></option>
+						<option><font color="Blue">Blue</font></option>
+						<option><font color="Navy">Navy</font></option>
+						<option><font color="Fuchsia">Fuchsia</font></option>
+						<option><font color="Purple">Purple</font></option>
+					</select>
+					<button type=button class="myButton" onclick="bold()"><b>B</b></button>
+					<button type=button class="myButton" onclick="italic()"><i>I</i></button>
+					<button type=button class="myButton" onclick="underline()"><u>U</u></button>
+					<a href="index.html"> <button class="myButton" type="button"> Reset</button></a>
+					<button type=button onclick="totalclear()" class="myButton" style="float: right;"><img src="images/delete.png" width="15px" ></button>
+					<br><br>
+					<b><font color="#8f8b8f">Select Images:</font></b>
+					&nbsp
+					<input type="file" name="filesUpload[]" class="myButton" id="fileToUpload" multiple>
+					<input type="submit"  class="myButton" value="Submit Post" name="submit" style="float: right;">
+				</form>
+				
+				<br>
+			</div>	
+                <font color="white"> Contact:</font> <a href="https://saicharanregunta.github.io/"><font color="white"> Sai Charan Regunta</font></a>
+		</div>
+
+	</body>
+</html> 
